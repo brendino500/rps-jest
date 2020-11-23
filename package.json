@@ -6,12 +6,20 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
+    "autoprefixer": "^10.0.2",
+    "chokidar-cli": "^2.1.0",
+    "enzyme": "^3.11.0",
+    "jest-enzyme": "^7.1.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
+    "save-dev": "0.0.1-security",
     "web-vitals": "^0.2.4"
   },
-  "scripts": {
+"scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

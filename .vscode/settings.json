@@ -1,0 +1,10 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#0ea980",
+    "titleBar.activeBackground": "#0ea980",
+    "titleBar.inactiveBackground": "#0ea980",
+    "titleBar.inactiveForeground": "#eac8ce",
+    "titleBar.activeForeground": "#eac8ce"
+  },
+  "window.title": "R O C K * P A P E R * S C I S S O R S"
+}
