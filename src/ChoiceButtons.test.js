@@ -33,3 +33,5 @@ describe("Actions onClick", () => {
 
   test("Results text renders and changes according to results", () => {});
 });
+
+test("props being passed", () => {});
