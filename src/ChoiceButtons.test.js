@@ -31,7 +31,11 @@ describe("Actions onClick", () => {
 
   test("Player score text changes according to results", () => {});
 
-  test("Results text renders and changes according to results", () => {});
+  test("Results text renders and changes according to results", () => {
+    // find button
+    //click button
+    // find siaply and test that the restults change
+  });
 });
 
 test("props being passed", () => {});
