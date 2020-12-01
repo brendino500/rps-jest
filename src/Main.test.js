@@ -13,3 +13,9 @@ test("App renders without error", () => {
   const component = findByTestAttr(wrapper, "component-main");
   expect(component.length).toBe(1);
 });
+
+test("Instructions appear", () => {
+  const wrapper = setup();
+  const instructions = findByTestAttr(wrapper, "pick-a-choice-display").text();
+  expect(instructions).toBe("Pick a choice");
+});
