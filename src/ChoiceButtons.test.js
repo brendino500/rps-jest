@@ -2,9 +2,15 @@ import { mount } from "enzyme";
 import { findByTestAttr } from "./test/testUtils";
 
 import ChoiceButtons from "./ChoiceButtons";
-
+const mockHandleClick = jest.fn();
+const mockHandleReset = jest.fn();
 const setup = () => {
-  return mount(<ChoiceButtons />);
+  return mount(
+    <ChoiceButtons
+      handleClick={mockHandleClick}
+      handleReset={mockHandleReset}
+    />
+  );
 };
 
 describe("Render", () => {
@@ -23,16 +29,17 @@ describe("Render", () => {
 });
 
 describe("Actions onClick", () => {
-  test("Calls computerChoice on click", () => {});
-
-  test("Calls compareChoices on click", () => {});
-
-  test("Results text renders and changes according to results", () => {
+  const clickButton = () => {
     const wrapper = setup();
     // find button
     const button = findByTestAttr(wrapper, "choice-button");
     //click button
     button.simulate("click");
+  };
+
+  test("Calls compChoice on click", () => {
+    clickButton();
+    expect(mockHandleClick).toBeCalledTimes(1);
   });
 });
 
