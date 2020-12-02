@@ -10,6 +10,7 @@ export default function Choices(props) {
             className="option-btn"
             id="rock"
             value="rock"
+            data-test="choice-button"
           >
             👊
           </button>

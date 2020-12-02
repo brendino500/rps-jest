@@ -27,14 +27,12 @@ describe("Actions onClick", () => {
 
   test("Calls compareChoices on click", () => {});
 
-  test("Computer score text changes according to results", () => {});
-
-  test("Player score text changes according to results", () => {});
-
   test("Results text renders and changes according to results", () => {
+    const wrapper = setup();
     // find button
+    const button = findByTestAttr(wrapper, "choice-button");
     //click button
-    // find siaply and test that the restults change
+    button.simulate("click");
   });
 });
 
