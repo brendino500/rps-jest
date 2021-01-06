@@ -6,34 +6,40 @@ import Results from "./Results";
 function App() {
   const [playerScore, setPlayerScore] = React.useState(0);
   const [computerScore, setComputerScore] = React.useState(0);
-  const [options, setOptions] = React.useState(["rock", " paper", "scissors"]);
+  const [options, setOptions] = React.useState(["rock", "paper", "scissors"]);
   const [playerChoice, setPlayerChoice] = React.useState("");
   const [computerChoice, setComputerChoice] = React.useState("");
   const [winnerResults, setWinnerResults] = React.useState("");
 
   const handleClick = (e) => {
-    setComputerChoice(compChoice());
+    const tempCompChoice = compChoice();
+    setComputerChoice(tempCompChoice);
     setPlayerChoice(e.target.value);
-    setWinnerResults(compareChoices(computerChoice, playerChoice));
+    setWinnerResults(compareChoices(tempCompChoice, e.target.value));
   };
 
   const handleReset = () => {
     setComputerChoice("");
     setPlayerChoice("");
     setWinnerResults("");
-    setOptions(["rock", " paper", "scissors"]);
+    setOptions(["rock", "paper", "scissors"]);
   };
 
   const compChoice = () => {
     return options[Math.floor(Math.random() * options.length)];
   };
 
-  const compareChoices = (computerChoice, playerChoice) => {
-    if (playerChoice === computerChoice) return "Draw";
-    if (
-      computerChoice === options[0] ||
-      computerChoice === options[1] ||
-      computerChoice === options[2]
+  const compareChoices = (computer, player) => {
+    console.log("player", player);
+    console.log("computer", computer);
+    console.log("-------");
+
+    if (player === computer) {
+      return "Draw";
+    } else if (
+      (player === options[0] && computer === options[2]) ||
+      (player === options[1] && computer === options[0]) ||
+      (player === options[2] && computer === options[1])
     ) {
       return "You Win";
     }
