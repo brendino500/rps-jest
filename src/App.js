@@ -1,5 +1,7 @@
 import React from "react";
 import ChoiceButtons from "./ChoiceButtons";
+import Main from "./Main";
+import Results from "./Results";
 
 function App() {
   const [playerScore, setPlayerScore] = React.useState(0);
@@ -40,14 +42,14 @@ function App() {
 
   return (
     <div className="container" data-test="component-app">
-      {/* <Main />
+      <Main />
       <Results
         playerChoice={playerChoice}
         computerChoice={computerChoice}
         playerScore={playerScore}
         computerScore={computerScore}
         winnerResults={winnerResults}
-      /> */}
+      />
       <ChoiceButtons handleClick={handleClick} handleReset={handleReset} />
     </div>
   );

@@ -4,7 +4,15 @@ import { findByTestAttr } from "./test/testUtils";
 import Results from "./Results";
 
 const setup = () => {
-  return mount(<Results />);
+  return mount(
+    <Results
+      playerChoice={playerChoice}
+      computerChoice={computerChoice}
+      playerScore={playerScore}
+      computerScore={computerScore}
+      winnerResults={winnerResults}
+    />
+  );
 };
 
 describe("Render", () => {
@@ -41,13 +49,13 @@ describe("Results", () => {
   });
 
   test("Player score display starts at 0", () => {
-    const score = findByTestAttr(wrapper, "player-score-display");
-    expect(score).toBe(0);
+    const score = findByTestAttr(wrapper, "player-score-display").text();
+    expect(score).toBe("0");
   });
 
   test("Computer score display starts at 0", () => {
-    const score = findByTestAttr(wrapper, "comp-score-display");
-    expect(score).toBe(0);
+    const score = findByTestAttr(wrapper, "comp-score-display").text();
+    expect(score).toBe("0");
   });
 
   test("Renders 'Computer won' results", () => {
@@ -57,5 +65,7 @@ describe("Results", () => {
 
   test("Updates score text", () => {});
 
-  test("Updates score text", () => {});
+  test("Player score increments when player wins", () => {});
+
+  test("Computer score increments when player wins", () => {});
 });

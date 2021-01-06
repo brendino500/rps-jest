@@ -6,25 +6,25 @@ export default function Results(props) {
           You chose: <span className="player-choice">{props.playerChoice}</span>
         </p>
         <p>
-          Computer chose:{" "}
+          Computer chose:
           <span className="computer-choice">{props.computerChoice}</span>
         </p>
       </div>
       <div className="winner" data-test="winner-text">
         <p>
-          The winner is{" "}
+          The winner is
           <span className="winner-results">{props.winnerResults}</span>
         </p>
       </div>
       <div className="scoreboard" data-test="score-text">
         <p>
-          Your score{" "}
+          Your score
           <span className="youScore" data-test="player-score-display">
             {props.playerScore}
           </span>
         </p>
         <p>
-          Computer's score{" "}
+          Computer's score
           <span className="computerScore" data-test="comp-score-display">
             {props.computerScore}
           </span>
