@@ -13,7 +13,9 @@ export default function Results(props) {
       <div className="winner" data-test="winner-text">
         <p>
           The winner is
-          <span className="winner-results">{props.winnerResults}</span>
+          <span className="winner-results" data-test="winner-results-text">
+            {props.winnerResults}
+          </span>
         </p>
       </div>
       <div className="scoreboard" data-test="score-text">

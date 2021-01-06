@@ -6,11 +6,11 @@ import Results from "./Results";
 const setup = () => {
   return mount(
     <Results
-      playerChoice={playerChoice}
-      computerChoice={computerChoice}
-      playerScore={playerScore}
-      computerScore={computerScore}
-      winnerResults={winnerResults}
+      playerChoice={"Rock"}
+      computerChoice={"Paper"}
+      playerScore={0}
+      computerScore={0}
+      winnerResults={"You lost"}
     />
   );
 };
@@ -58,14 +58,53 @@ describe("Results", () => {
     expect(score).toBe("0");
   });
 
-  test("Renders 'Computer won' results", () => {
-    const compWinsResultsText = findByTestAttr(wrapper, "comp-wins-text");
-    expect(compWinsResultsText.length).toBe(1);
+  test("Updates score text", () => {});
+});
+
+describe("Events when player wins", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = setup();
   });
 
-  test("Updates score text", () => {});
+  test("Player score increments when player wins", () => {
+    const compScore = findByTestAttr(wrapper, "player-score-display").text();
+    expect(compScore).toBe("1");
+  });
 
-  test("Player score increments when player wins", () => {});
+  test("Renders 'Player won' results", () => {
+    const compWinsResultsText = findByTestAttr(wrapper, "winner-results-text");
+    expect(compWinsResultsText.length).toBe(1);
+  });
+});
 
-  test("Computer score increments when player wins", () => {});
+describe("Events when computer wins", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = setup();
+  });
+
+  test("Computer score increments when computer wins", () => {
+    const compScore = findByTestAttr(wrapper, "comp-score-display").text();
+    expect(compScore).toBe("1");
+  });
+
+  test("Renders 'Computer won' results", () => {
+    const compWinsResultsText = findByTestAttr(wrapper, "winner-results-text");
+    expect(compWinsResultsText.length).toBe(1);
+  });
+});
+
+describe("Events when draw happens", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = setup();
+  });
+
+  test("Score doesn't change", () => {});
+
+  test("Renders 'It's a draw' results", () => {
+    const compWinsResultsText = findByTestAttr(wrapper, "winner-results-text");
+    expect(compWinsResultsText.length).toBe(1);
+  });
 });
