@@ -4,6 +4,8 @@
 
 ## 🌝 Overview
 
+[View my project](https://rpc-bt.netlify.app/)
+
 - I decided to code this project as I wanted to **continue my learning in Jest, Enzyme and React Hooks.**
 - Over the last few months I had coded rock paper scissors **three different times with each new version implementing a new technology I had learnt.**
 - 1. HTML, CSS & vanilla JavaScript
