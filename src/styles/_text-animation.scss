@@ -43,8 +43,15 @@ body {
   font-size: 1.5em;
 }
 
-.smaller {
-  font-size: 0.4em;
+.picture-animation {
+  -webkit-animation: squiggly-anim 0.45s linear infinite;
+  animation: squiggly-anim 0.45s linear infinite;
+  // display: inline-block;
+  // vertical-align: middle;
+  // width: 100%;
+  // outline: none;
+  // text-align: center;
+  // line-height: 1;
 }
 
 p {

@@ -1,12 +1,17 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography, Button } from "@material-ui/core";
 
-export default function Choices(props) {
+import { ReactComponent as Scissors } from "./assets/scissors.svg";
+
+export default function Choices({ handleClick, handleReset }) {
+  const classes = useStyles();
   return (
     <>
       <section className="buttons" data-test="component-choice-buttons">
         <div className="button-options" data-test="choices-buttons">
           <button
-            onClick={props.handleClick}
+            onClick={handleClick}
             className="option-btn"
             id="rock"
             value="rock"
@@ -15,28 +20,26 @@ export default function Choices(props) {
             👊
           </button>
           <button
-            onClick={props.handleClick}
+            onClick={handleClick}
             className="option-btn"
             id="paper"
             value="paper"
           >
             ✋
           </button>
-          <button
-            onClick={props.handleClick}
-            className="option-btn"
-            id="scissors"
-            value="scissors"
-          >
-            ✌️
-          </button>
+          <div className="picture-animation" value="scissors">
+            <button
+              onClick={handleClick}
+              className="option-btn"
+              id="scissors"
+              value="scissors"
+            >
+              <Scissors className={classes.images} value="scissors" />
+            </button>
+          </div>
         </div>
         <div className="reset-button">
-          <button
-            onClick={props.handleReset}
-            className="reset-button"
-            id="reset"
-          >
+          <button onClick={handleReset} className="reset-button" id="reset">
             🙌 Reset 🙌
           </button>
         </div>
@@ -44,3 +47,10 @@ export default function Choices(props) {
     </>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  images: {
+    height: "10em",
+    width: "auto",
+  },
+}));
