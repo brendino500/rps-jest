@@ -13,12 +13,19 @@ function App() {
 
   const handleClick = (e) => {
     const tempCompChoice = compChoice();
+    const tempPlayerChoice = !!e.target.value
+      ? e.target.value
+      : e.target.parentNode.parentNode.value;
     setComputerChoice(tempCompChoice);
-    setPlayerChoice(e.target.value);
-    setWinnerResults(compareChoices(tempCompChoice, e.target.value));
+    setPlayerChoice(tempPlayerChoice);
+    setWinnerResults(compareChoices(tempCompChoice, tempPlayerChoice));
   };
 
-  const handleReset = () => {
+  const handleReset = (e) => {
+    console.log(e);
+    console.log(
+      !!e.target.value ? e.target.value : e.target.parentNode.parentNode.value
+    );
     setComputerChoice("");
     setPlayerChoice("");
     setWinnerResults("");
