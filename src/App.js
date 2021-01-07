@@ -37,17 +37,17 @@ function App() {
     console.log("-------");
 
     if (player === computer) {
-      return "Draw";
+      return "no-one";
     } else if (
       (player === options[0] && computer === options[2]) ||
       (player === options[1] && computer === options[0]) ||
       (player === options[2] && computer === options[1])
     ) {
       setPlayerScore(playerScore + 1);
-      return "You Win";
+      return "you";
     }
     setComputerScore(computerScore + 1);
-    return "You Lost";
+    return "not you";
   };
 
   return (
