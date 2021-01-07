@@ -22,27 +22,27 @@ export default function Choices({ handleClick, handleReset }) {
           <Button
             onClick={handleClick}
             className="option-btn"
-            id="rock"
-            value="rock"
+            id="roche"
+            value="roche"
             data-test="choice-button"
           >
-            <img src={Rock} alt="rock" className={classes.images} />
+            <img src={Rock} alt="roche" className={classes.images} />
           </Button>
 
           <Button
             onClick={handleClick}
             className="option-btn"
-            id="paper"
-            value="paper"
+            id="papier"
+            value="papier"
           >
-            <img src={Paper} alt="paper" className={classes.images} />
+            <img src={Paper} alt="papier" className={classes.images} />
           </Button>
 
           <Button
             onClick={handleClick}
             className="option-btn"
-            id="scissors"
-            value="scissors"
+            id="ciseaux"
+            value="ciseaux"
           >
             <Scissors className={classes.images} />
           </Button>
@@ -54,7 +54,7 @@ export default function Choices({ handleClick, handleReset }) {
             value="reset"
             id="reset"
           >
-            <Typography className={classes.resetText}>Reset</Typography>
+            <Typography className={classes.resetText}>Réinitialiser</Typography>
           </Button>
         </div>
       </section>

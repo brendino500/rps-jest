@@ -6,7 +6,7 @@ import Results from "./Results";
 function App() {
   const [playerScore, setPlayerScore] = React.useState(0);
   const [computerScore, setComputerScore] = React.useState(0);
-  const [options, setOptions] = React.useState(["rock", "paper", "scissors"]);
+  const [options, setOptions] = React.useState(["roche", "papier", "ciseaux"]);
   const [playerChoice, setPlayerChoice] = React.useState("");
   const [computerChoice, setComputerChoice] = React.useState("");
   const [winnerResults, setWinnerResults] = React.useState("");
@@ -31,7 +31,7 @@ function App() {
     setWinnerResults("");
     setPlayerScore(0);
     setComputerScore(0);
-    setOptions(["rock", "paper", "scissors"]);
+    setOptions(["roch", "papier", "ciseaux"]);
   };
 
   const compChoice = () => {
@@ -44,17 +44,17 @@ function App() {
     console.log("-------");
 
     if (player === computer) {
-      return "no-one";
+      return "personne";
     } else if (
       (player === options[0] && computer === options[2]) ||
       (player === options[1] && computer === options[0]) ||
       (player === options[2] && computer === options[1])
     ) {
       setPlayerScore(playerScore + 1);
-      return "you";
+      return "toi";
     }
     setComputerScore(computerScore + 1);
-    return "not you";
+    return "pas toi";
   };
 
   return (

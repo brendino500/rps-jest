@@ -7,7 +7,7 @@ export default function Main() {
       <div className="text-animation">
         <div className="title-animation" data-test="component-main">
           <h1 className="title-animation" data-test="pick-a-choice-display">
-            Rock - Paper - Scissors
+            Roche - Papier - Ciseaux
           </h1>
         </div>
       </div>

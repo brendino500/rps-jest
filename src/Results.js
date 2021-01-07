@@ -23,13 +23,13 @@ export default function Results({
         alignItems="center"
       >
         <Typography className={classes.scoreText}>
-          Your score{" "}
+          Ton score{" "}
           <span className="youScore" data-test="player-score-display">
             {playerScore}
           </span>
         </Typography>
         <Typography className={classes.scoreText}>
-          Computer's score{" "}
+          Score de l'ordinateur{" "}
           <span className="computerScore" data-test="comp-score-display">
             {computerScore}
           </span>
@@ -40,13 +40,13 @@ export default function Results({
         data-test="results-text"
       >
         <Typography className={classes.text}>
-          You chose:{" "}
+          Tu choisis:{" "}
           <span className="player-choice">
             <b>{playerChoice}</b>
           </span>
         </Typography>
         <Typography className={classes.text}>
-          Computer chose:{" "}
+          L'ordinateur a choisi:{" "}
           <span className="computer-choice">
             <b>{computerChoice}</b>
           </span>
@@ -57,7 +57,7 @@ export default function Results({
         data-test="winner-text"
       >
         <Typography className={classes.text}>
-          The winner is{" "}
+          Le gagnant est{" "}
           <span className="winner-results" data-test="winner-results-text">
             <b>{winnerResults}</b>
           </span>
