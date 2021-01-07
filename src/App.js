@@ -22,6 +22,8 @@ function App() {
     setComputerChoice("");
     setPlayerChoice("");
     setWinnerResults("");
+    setPlayerScore(0);
+    setComputerScore(0);
     setOptions(["rock", "paper", "scissors"]);
   };
 
@@ -41,8 +43,10 @@ function App() {
       (player === options[1] && computer === options[0]) ||
       (player === options[2] && computer === options[1])
     ) {
+      setPlayerScore(playerScore + 1);
       return "You Win";
     }
+    setComputerScore(computerScore + 1);
     return "You Lost";
   };
 
