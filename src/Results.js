@@ -11,7 +11,10 @@ export default function Results({
 }) {
   const classes = useStyles();
   return (
-    <section className="results" data-test="component-results">
+    <section
+      className={("results", classes.results)}
+      data-test="component-results"
+    >
       <Grid
         className={("scoreboard", classes.scoreGrid)}
         data-test="score-text"
@@ -32,22 +35,28 @@ export default function Results({
           </span>
         </Typography>
       </Grid>
-      <div className="round-results" data-test="results-text">
-        <p>
+      <div
+        className={("round-results", classes.roundResults)}
+        data-test="results-text"
+      >
+        <Typography className={classes.text}>
           You chose: <span className="player-choice">{playerChoice}</span>
-        </p>
-        <p>
+        </Typography>
+        <Typography className={classes.text}>
           Computer chose:{" "}
           <span className="computer-choice">{computerChoice}</span>
-        </p>
+        </Typography>
       </div>
-      <div className="winner" data-test="winner-text">
-        <p>
+      <div
+        className={("winner", classes.winnerResults)}
+        data-test="winner-text"
+      >
+        <Typography className={classes.text}>
           The winner is{" "}
           <span className="winner-results" data-test="winner-results-text">
             {winnerResults}
           </span>
-        </p>
+        </Typography>
       </div>
     </section>
   );
@@ -56,10 +65,26 @@ export default function Results({
 const useStyles = makeStyles((theme) => ({
   scoreText: {
     fontFamily: "Roboto Slab",
+    fontSize: 30,
+    // marginTop: "-7em",
   },
   scoreGrid: {
     display: "flex",
     justify: "space around",
     alignItems: "center",
+  },
+  results: {
+    marginTop: "-5em",
+  },
+  roundResults: {
+    textAlign: "center",
+  },
+  winnerResults: {
+    textAlign: "center",
+  },
+  text: {
+    fontSize: 24,
+    fontFamily: "Beth Ellen",
+    margin: "0.75em 0",
   },
 }));
