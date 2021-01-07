@@ -4,11 +4,11 @@ import TextAnimation from "./styles/TextAnimation";
 export default function Main() {
   return (
     <>
-      <div className="test">
-        <div className="small" data-test="component-main">
-          <small className="small" data-test="pick-a-choice-display">
+      <div className="text-animation">
+        <div className="title-animation" data-test="component-main">
+          <h1 className="title-animation" data-test="pick-a-choice-display">
             Rock - Paper - Scissors
-          </small>
+          </h1>
         </div>
       </div>
       <TextAnimation />

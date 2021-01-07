@@ -1,87 +1,3 @@
-// .home-animated-1 {
-//   font-family: "Beth Ellen", cursive;
-//   font-size: 3rem;
-//   color: black;
-//   padding-top: 20px;
-//   padding-bottom: 50px;
-//   letter-spacing: 1.2rem;
-// }
-// .home-animated-2 {
-//   font-family: "Beth Ellen", cursive;
-//   font-size: 6rem;
-//   color: black;
-//   padding-bottom: 50px;
-//   letter-spacing: 2rem;
-// }
-// .home-animated-3 {
-//   font-family: "Beth Ellen", cursive;
-//   font-size: 5rem;
-//   color: black;
-//   padding-bottom: 50px;
-//   letter-spacing: 2.5rem;
-// }
-
-// @media (max-width: 640px) {
-//   .home-animated-1 {
-//     font-size: 1.3rem;
-//   }
-//   .home-animated-2 {
-//     font-size: 1.5rem;
-//   }
-//   .home-animated-3 {
-//     font-size: 1.5rem;
-//   }
-// }
-// .animate-home {
-//   -webkit-animation: home-anim 0.34s linear infinite;
-//   animation: home-anim 0.34s linear infinite;
-
-//   @-webkit-keyframes home-anim {
-//     0% {
-//       -webkit-filter: url("#home-0");
-//       filter: url("#home-0");
-//     }
-//     25% {
-//       -webkit-filter: url("#home-1");
-//       filter: url("#home-1");
-//     }
-//     50% {
-//       -webkit-filter: url("#home-2");
-//       filter: url("#home-2");
-//     }
-//     75% {
-//       -webkit-filter: url("#home-3");
-//       filter: url("#home-3");
-//     }
-//     100% {
-//       -webkit-filter: url("#home-4");
-//       filter: url("#home-4");
-//     }
-//   }
-//   @keyframes home-anim {
-//     0% {
-//       -webkit-filter: url("#home-0");
-//       filter: url("#home-0");
-//     }
-//     25% {
-//       -webkit-filter: url("#home-1");
-//       filter: url("#home-1");
-//     }
-//     50% {
-//       -webkit-filter: url("#home-2");
-//       filter: url("#home-2");
-//     }
-//     75% {
-//       -webkit-filter: url("#home-3");
-//       filter: url("#home-3");
-//     }
-//     100% {
-//       -webkit-filter: url("#home-4");
-//       filter: url("#home-4");
-//     }
-//   }
-// }
-
 @import url("https://fonts.googleapis.com/css2?family=Beth+Ellen&family=East+Sea+Dokdo&display=swap");
 
 body {
@@ -106,16 +22,13 @@ body {
   }
 }
 
-// $squiggly: animation squiggly-anim 0.34s linear infinite;
-
 body {
-  line-height: 100vh;
-  background: #111;
-  color: white;
+  // line-height: 100vh;
+  background: #f3f3f2;
+  color: #111110;
 }
 
-.test {
-  // @extend #{$squiggly};
+.text-animation {
   -webkit-animation: squiggly-anim 0.34s linear infinite;
   animation: squiggly-anim 0.34s linear infinite;
   display: inline-block;
@@ -126,8 +39,8 @@ body {
   line-height: 1;
 }
 
-.small {
-  font-size: 0.5em;
+.title-animation {
+  font-size: 0.7em;
 }
 
 .smaller {
