@@ -1,23 +1,17 @@
 import React from "react";
-
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import TextAnimation from "./styles/TextAnimation";
 
 export default function Main() {
-  const classes = useStyles();
   return (
-    <div className="section" data-test="component-main">
-      <Typography className={classes.title} data-test="pick-a-choice-display">
-        Rock - Paper - Scissors
-      </Typography>
-    </div>
+    <>
+      <div className="test">
+        <div className="small" data-test="component-main">
+          <small className="small" data-test="pick-a-choice-display">
+            Rock - Paper - Scissors
+          </small>
+        </div>
+      </div>
+      <TextAnimation />
+    </>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  title: {
-    fontFamily: "Beth Ellen",
-    fontSize: 40,
-    letterSpacing: 3,
-  },
-}));
