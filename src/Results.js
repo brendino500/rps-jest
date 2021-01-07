@@ -40,11 +40,16 @@ export default function Results({
         data-test="results-text"
       >
         <Typography className={classes.text}>
-          You chose: <span className="player-choice">{playerChoice}</span>
+          You chose:{" "}
+          <span className="player-choice">
+            <b>{playerChoice}</b>
+          </span>
         </Typography>
         <Typography className={classes.text}>
           Computer chose:{" "}
-          <span className="computer-choice">{computerChoice}</span>
+          <span className="computer-choice">
+            <b>{computerChoice}</b>
+          </span>
         </Typography>
       </div>
       <div
@@ -54,7 +59,7 @@ export default function Results({
         <Typography className={classes.text}>
           The winner is{" "}
           <span className="winner-results" data-test="winner-results-text">
-            {winnerResults}
+            <b>{winnerResults}</b>
           </span>
         </Typography>
       </div>
@@ -83,8 +88,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   text: {
-    fontSize: 24,
-    fontFamily: "Beth Ellen",
-    margin: "0.75em 0",
+    fontSize: 20,
+    fontFamily: "Roboto Slab",
+    margin: "0.55em 0",
   },
 }));

@@ -11,7 +11,11 @@ export default function Choices({ handleClick, handleReset }) {
   return (
     <>
       <section className="buttons" data-test="component-choice-buttons">
-        <div
+        <Grid
+          container
+          direction="row"
+          justify="space-evenly"
+          alignItems="center"
           className="button-options, picture-animation"
           data-test="choices-buttons"
         >
@@ -42,8 +46,8 @@ export default function Choices({ handleClick, handleReset }) {
           >
             <Scissors className={classes.images} />
           </Button>
-        </div>
-        <div className="reset-button">
+        </Grid>
+        <div className={("reset-button", classes.resetButton)}>
           <Button
             onClick={handleReset}
             className="reset-button"
@@ -60,7 +64,7 @@ export default function Choices({ handleClick, handleReset }) {
 
 const useStyles = makeStyles((theme) => ({
   images: {
-    height: "10em",
+    height: 200,
     width: "8em",
     value: "scissors",
   },
@@ -69,5 +73,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 4,
     fontWeight: "bold",
     fontSize: 25,
+  },
+  resetButton: {
+    display: "flex",
+    justifyContent: "center",
   },
 }));
