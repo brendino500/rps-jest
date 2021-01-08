@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
   scoreText: {
     fontFamily: "Roboto Slab",
     fontSize: 30,
-    // marginTop: "-7em",
   },
   scoreGrid: {
     display: "flex",
