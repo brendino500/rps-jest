@@ -2,7 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 
-import TextAnimation from "./styles/TextAnimation";
+import useStyles from "./styles/mainStyles";
+import TextAnimation from "../styles/TextAnimation";
 
 export default function Main() {
   const classes = useStyles();
@@ -22,16 +23,3 @@ export default function Main() {
     </>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  title: {
-    fontFamily: "Beth Ellen",
-    fontSize: "1.5em",
-    [theme.breakpoints.between("xs", "sm")]: {
-      fontSize: 28,
-    },
-    [theme.breakpoints.between("sm", "md")]: {
-      fontSize: 40,
-    },
-  },
-}));

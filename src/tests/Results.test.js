@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
-import { findByTestAttr } from "./test/testUtils";
+import { findByTestAttr } from "../test/testUtils";
 
-import Results from "./Results";
+import Results from "../components/Results";
 
 const setup = () => {
   return mount(

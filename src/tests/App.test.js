@@ -1,8 +1,8 @@
 import { mount } from "enzyme";
 import { render, screen } from "@testing-library/react";
-import { findByTestAttr } from "./test/testUtils";
+import { findByTestAttr } from "../test/testUtils";
 
-import App from "./App";
+import App from "../App";
 
 const setup = () => {
   return mount(<App />);

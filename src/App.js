@@ -1,7 +1,7 @@
 import React from "react";
-import ChoiceButtons from "./ChoiceButtons";
-import Main from "./Main";
-import Results from "./Results";
+import ChoiceButtons from "./components/ChoiceButtons";
+import Main from "./components/Main";
+import Results from "./components/Results";
 
 function App() {
   const [playerScore, setPlayerScore] = React.useState(0);

@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
-import { findByTestAttr } from "./test/testUtils";
+import { findByTestAttr } from "../test/testUtils";
 
-import ChoiceButtons from "./ChoiceButtons";
+import ChoiceButtons from "../components/ChoiceButtons";
 const mockHandleClick = jest.fn();
 const mockHandleReset = jest.fn();
 const setup = () => {
